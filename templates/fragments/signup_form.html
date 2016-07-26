@@ -1,0 +1,96 @@
+<!--﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Django-rest-auth ">
+    <meta name="author" content="Tivix, Inc.">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-theme.min.css">
+	<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+ 
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+
+});
+</script>
+	
+<script type="text/javascript">
+function getRandowNum(){
+ var Num=""; 
+for(var i=0;i<6;i++) 
+{ 
+Num+=Math.floor(Math.random()*10); 
+}   
+return Num;
+}
+</script>
+
+<script type="text/javascript">
+function SecurityCode(){
+var email = $("input[name='username']").val(); 
+email=email+"@oeasy.com";
+document.getElementById("email").value=email;
+code=getRandowNum();
+//alert(email+"手机号码");
+alert(code+"验证码");
+}
+</script>
+</head>
+-->
+<form class="form-horizontal ajax-post" id="signup" role="form" action="{% url 'rest_register' %}">
+
+  <div class="form-group">
+    <label for="username" class="col-sm-2 control-label">手机号码</label>
+    <div class="col-sm-10">
+      <input name="username" type="text" class="form-control" id="username" placeholder="Username">
+	   <!--<input name="email" value="" style="display:none" type="text" class="form-control" id="email" >
+	    <button type="button"  onclick="SecurityCode()" >获取验证码</button>-->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password1" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-10">
+      <input name="password1" type="password" class="form-control" id="password1" placeholder="Password">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password2" class="col-sm-2 control-label">确认密码</label>
+    <div class="col-sm-10">
+      <input name="password2" type="password" class="form-control" id="password2" placeholder="Repeat password">
+    </div>
+  </div>
+
+
+ <!--<div class="form-group">
+    <label for="first_name" class="col-sm-2 control-label">用户类型</label>
+    <div class="col-sm-10">
+      <input name="first_name" type="text" class="form-control" id="first_name" placeholder="B端是0 C端是1">
+    </div>
+  </div>
+  
+ 
+   <div class="form-group">
+    <label for="code" class="col-sm-2 control-label">验证码</label>
+    <div class="col-sm-10">
+      <input name="code" type="text" class="form-control" id="code" placeholder="SecurityCode">
+	  </input>
+    </div>
+  </div>-->
+  
+  
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">注册</button>
+    </div>
+  </div>
+
+  <div class="form-group api-response"></div>
+</form>

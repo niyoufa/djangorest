@@ -1,0 +1,147 @@
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 85, in run
+    self.result = application(self.environ, self.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py", line 64, in __call__
+    return self.application(environ, start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 168, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 46, in load_middleware
+    mw_instance = mw_class()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 23, in __init__
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 367, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 361, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/renren/renren_new/renren_new/urls.py", line 36, in <module>
+    url(r'^rest-auth/', include('rest_auth.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 28, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/renren/renren_new/rest_auth/urls.py", line 3, in <module>
+    from rest_auth.views import (
+  File "/home/renren/renren_new/rest_auth/views.py", line 12, in <module>
+    from .app_settings import (
+  File "/home/renren/renren_new/rest_auth/app_settings.py", line 3, in <module>
+    from rest_auth.serializers import (
+  File "/home/renren/renren_new/rest_auth/serializers.py", line 50
+SyntaxError: Non-ASCII character '\xe8' in file /home/renren/renren_new/rest_auth/serializers.py on line 50, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+[19/Jul/2016 12:46:57] "POST /rest-auth/registration/ HTTP/1.1" 500 59
+Error: That port is already in use.
+[19/Jul/2016 12:48:52] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:49:16] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[19/Jul/2016 12:51:34] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:51:35] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:51:36] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:51:36] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:51:36] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:51:37] "POST /rest-auth/registration/ HTTP/1.1" 400 71
+[19/Jul/2016 12:51:41] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[19/Jul/2016 12:58:51] "GET /login HTTP/1.1" 301 0
+[19/Jul/2016 12:58:51] "GET /login/ HTTP/1.1" 200 4946
+[19/Jul/2016 12:58:58] "POST /login HTTP/1.1" 500 74565
+[19/Jul/2016 12:59:38] "GET /coupons/ HTTP/1.1" 200 500585
+[19/Jul/2016 13:33:42] "POST /order HTTP/1.1" 500 74565
+[19/Jul/2016 13:45:18] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[19/Jul/2016 14:18:53] "GET /coupons/ HTTP/1.1" 200 500585
+[19/Jul/2016 14:19:04] "GET /coupons/ HTTP/1.1" 200 500585
+[19/Jul/2016 14:19:25] "GET /api-auth/login/?next=/coupons/ HTTP/1.1" 200 3641
+[19/Jul/2016 14:19:33] "POST /api-auth/login/ HTTP/1.1" 200 3965
+[19/Jul/2016 14:19:43] "POST /api-auth/login/ HTTP/1.1" 200 3965
+[19/Jul/2016 14:19:46] "GET /api-auth/login/?next=/coupons/ HTTP/1.1" 200 3641
+[19/Jul/2016 14:19:48] "GET /coupons/ HTTP/1.1" 200 500585
+[19/Jul/2016 14:21:17] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[19/Jul/2016 14:27:44] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[19/Jul/2016 15:22:03] "GET /order HTTP/1.1" 301 0
+[19/Jul/2016 15:22:03] "GET /order/ HTTP/1.1" 405 45
+[19/Jul/2016 15:22:06] "POST /order HTTP/1.1" 500 74565
+[19/Jul/2016 17:41:30] "GET /order/1722 HTTP/1.1" 301 0
+[19/Jul/2016 17:41:30] "GET /order/1722/ HTTP/1.1" 200 687
+[19/Jul/2016 17:41:55] "POST /order/ HTTP/1.1" 500 103246
+[19/Jul/2016 17:43:11] "POST /order/ HTTP/1.1" 201 687
+[19/Jul/2016 17:44:18] "GET /order/1727 HTTP/1.1" 301 0
+[19/Jul/2016 17:44:18] "GET /order/1727/ HTTP/1.1" 200 687
+[19/Jul/2016 17:44:56] "POST /order/ HTTP/1.1" 201 687
+[19/Jul/2016 18:09:12] "POST /order/ HTTP/1.1" 201 687
+[19/Jul/2016 18:09:30] "GET /order/1729 HTTP/1.1" 301 0
+[19/Jul/2016 18:09:30] "GET /order/1729/ HTTP/1.1" 200 687
+[19/Jul/2016 18:19:15] "POST /order/ HTTP/1.1" 500 91354
+[20/Jul/2016 09:49:27] "GET /order/1721 HTTP/1.1" 301 0
+[20/Jul/2016 09:49:27] "GET /order/1721/ HTTP/1.0" 200 687
+[20/Jul/2016 09:49:30] "GET /order HTTP/1.1" 301 0
+[20/Jul/2016 09:49:30] "GET /order/ HTTP/1.0" 405 45
+[20/Jul/2016 10:33:58] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 10:34:15] "POST /order/ HTTP/1.1" 201 667
+[20/Jul/2016 10:47:06] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 10:47:29] "POST /order/ HTTP/1.1" 500 91358
+[20/Jul/2016 10:47:36] "POST /order/ HTTP/1.1" 500 91357
+[20/Jul/2016 10:50:29] "POST /order/ HTTP/1.1" 500 91358
+[20/Jul/2016 10:51:05] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 10:51:25] "POST /order/ HTTP/1.1" 201 669
+[20/Jul/2016 11:02:52] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 11:03:27] "POST /order/ HTTP/1.1" 201 687
+[20/Jul/2016 11:08:06] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[20/Jul/2016 11:16:47] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 15:55:48] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 15:56:16] "POST /order/ HTTP/1.1" 201 669
+[20/Jul/2016 16:17:33] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 17:38:18] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 18:19:54] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[20/Jul/2016 18:20:39] "POST /order/ HTTP/1.1" 201 687
+[20/Jul/2016 20:25:24] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[21/Jul/2016 00:16:10] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[21/Jul/2016 04:34:31] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[21/Jul/2016 22:01:41] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[22/Jul/2016 01:39:36] "GET http://180.163.113.77/check_proxy HTTP/1.1" 404 1689
+[22/Jul/2016 06:44:47] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[22/Jul/2016 08:27:12] "GET http://www.izhongsai.com/ HTTP/1.1" 404 1668
+[22/Jul/2016 09:59:48] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[22/Jul/2016 10:01:30] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[22/Jul/2016 10:04:19] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[22/Jul/2016 10:04:54] "POST /order/ HTTP/1.1" 201 672
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 19, 2016 - 17:41:26
+Django version 1.7, using settings 'renren_new.settings'
+Starting development server at http://0.0.0.0:8085/
+Quit the server with CONTROL-C.
+[22/Jul/2016 16:37:56] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[22/Jul/2016 17:00:57] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[23/Jul/2016 02:42:25] "GET http://119.90.40.16:8090/ HTTP/1.1" 404 1668
+[23/Jul/2016 04:32:14] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 22, 2016 - 16:02:26
+Django version 1.7, using settings 'renren_new.settings'
+Starting development server at http://0.0.0.0:8085/
+Quit the server with CONTROL-C.
+[23/Jul/2016 14:52:22] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[23/Jul/2016 14:53:18] "POST /order/ HTTP/1.1" 201 686
+[23/Jul/2016 15:02:05] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 23, 2016 - 14:44:39
+Django version 1.7, using settings 'renren_new.settings'
+Starting development server at http://0.0.0.0:8085/
+Quit the server with CONTROL-C.
+[23/Jul/2016 21:22:49] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[24/Jul/2016 02:09:01] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[24/Jul/2016 08:52:30] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[24/Jul/2016 09:34:38] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[24/Jul/2016 23:56:00] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[25/Jul/2016 01:47:57] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[25/Jul/2016 10:26:52] "POST /rest-auth/registration/ HTTP/1.1" 201 342
+[25/Jul/2016 11:33:12] "GET /manager/html HTTP/1.1" 404 30875
+[25/Jul/2016 12:09:05] "GET /manager/html HTTP/1.1" 404 30875
+[25/Jul/2016 21:31:22] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[25/Jul/2016 21:43:51] "GET http://www.izhongsai.com/ HTTP/1.1" 404 1668
+[26/Jul/2016 01:05:07] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[26/Jul/2016 06:17:48] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[26/Jul/2016 11:55:28] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1721
+[26/Jul/2016 12:05:33] "POST /rest-auth/registration/ HTTP/1.1" 201 342
